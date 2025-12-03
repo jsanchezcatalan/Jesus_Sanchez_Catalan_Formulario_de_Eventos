@@ -23,26 +23,28 @@
 
       <div class="mb-3">
         <label class="form-label">Nombre completo</label>
-        <input type="text" class="form-control" required>
+        <input type="text" name="nombre" class="form-control" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" required>
+        <input type="email" name="email" class="form-control" required>
         <div class="invalid-feedback">
           Por favor, ingrese un correo electrónico válido.
+        </div>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Número de teléfono</label>
-        <input type="tel" class="form-control" required>
+        <input type="tel" name="telefono" class="form-control" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Fecha de nacimiento</label>
-        <input type="date" class="form-control" required>
+        <input type="date" name="fecha_nacimiento" class="form-control" required>
         <div class="invalid-feedback">
           Por favor, ingrese una fecha de nacimiento válida.
+        </div>
       </div>
 
       <div class="mb-3">
@@ -62,12 +64,12 @@
 
       <div class="mb-3">
         <label class="form-label">Fecha del Evento</label>
-        <input type="date" class="form-control" required>
+        <input type="date" name="fecha_evento" class="form-control" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Tipo de Entrada</label>
-        <select class="form-select" required>
+        <select name="tipo_entrada" class="form-select" required>
           <option value="" disabled selected>Seleccione una opción</option>
           <option value="General">General</option>
           <option value="VIP">VIP</option>
@@ -78,19 +80,19 @@
       <div class="mb-3">
         <label class="form-label d-block">Preferencias de Comida</label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="vegetariana" value="Vegetariana">
+          <input class="form-check-input" type="checkbox" name="preferencias_comida[]" id="vegetariana" value="Vegetariana">
           <label class="form-check-label" for="vegetariana">Vegetariana</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="vegana" value="Vegana">
+          <input class="form-check-input" type="checkbox" name="preferencias_comida[]" id="vegana" value="Vegana">
           <label class="form-check-label" for="vegana">Vegana</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="sin-gluten" value="Sin Gluten">
+          <input class="form-check-input" type="checkbox" name="preferencias_comida[]" id="sin-gluten" value="Sin Gluten">
           <label class="form-check-label" for="sin-gluten">Sin Gluten</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="ninguna" value="Ninguna">
+          <input class="form-check-input" type="checkbox" name="preferencias_comida[]" id="ninguna" value="Ninguna">
           <label class="form-check-label" for="ninguna">Sin Preferencias</label>
         </div>
       </div>
@@ -100,47 +102,49 @@
 
       <div class="mb-3">
         <label class="form-label">Nombre de Usuario</label>
-        <input type="text" class="form-control" required>
+        <input type="text" name="usuario" class="form-control" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Contraseña</label>
-        <input type="password" class="form-control" required>
+        <input type="password" name="contrasena" class="form-control" required>
         <div class="invalid-feedback">
             Por favor, introduce una contraseña.
         </div>
+      </div>
 
       <div class="mb-3">
         <label class="form-label">Confirmar Contraseña</label>
-        <input type="password" class="form-control" required>
+        <input type="password" name="confirmar_contrasena" class="form-control" required>
       </div>
 
       <!-- Preferencias de Contacto -->
       <h2 class="mb-3 text-secondary">Preferencias de Contacto</h2>
 
       <div class="mb-3">
-        <input class="form-check-input" type="checkbox" id="email-contacto" value="Email">
+        <input class="form-check-input" type="checkbox" name="email_contacto" id="email-contacto" value="Email">
         <label class="form-check-label" for="email-contacto">¿Desea recibir notificaciones por correo electrónico?</label>
       </div>
 
       <div class="mb-3">
-        <input class="form-check-input" type="checkbox" id="terminos-condiciones" value="Acepto" required>
+        <input class="form-check-input" type="checkbox" name="terminos_condiciones" id="terminos-condiciones" value="Acepto" required>
         <label class="form-check-label" for="terminos-condiciones">¿Acepta los términos y condiciones?</label>
         <div class="invalid-feedback">
             Debe aceptar los términos y condiciones para continuar.
-    </div>
+        </div>
+      </div>
 
       <!-- Encuesta Adicional -->
       <h2 class="mb-3 text-secondary">Encuesta Adicional</h2>
 
       <div class="mb-3">
         <label for="calificador" class="form-label">Calificador de eventos anteriores (0-10)</label>
-        <input type="range" class="form-range" id="calificador" min="0" max="10" value="5" required>
+        <input type="range" name="calificador" class="form-range" id="calificador" min="0" max="10" value="5" required>
       </div>
 
       <div class="mb-3">
         <label for="comentarios" class="form-label">Comentarios adicionales</label>
-        <textarea class="form-control" id="comentarios" rows="3"></textarea>
+        <textarea name="comentarios" class="form-control" id="comentarios" rows="3"></textarea>
       </div>
 
       <div class="mb-3">
