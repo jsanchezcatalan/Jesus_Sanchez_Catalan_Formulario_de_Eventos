@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     exit();
 }
 
-// Capturar y limpiar datos - USANDO LOS NAMES QUE FALTAN EN TU HTML
+// Recoger y limpiar datos del formulario
 $nombre = limpiar($_POST['nombre'] ?? '');
 $email = limpiar($_POST['email'] ?? '');
 $telefono = limpiar($_POST['telefono'] ?? '');
